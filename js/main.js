@@ -538,7 +538,7 @@ counters.forEach(function (counter) {
   var updateCounter = function updateCounter() {
     var target = +counter.getAttribute('data-target');
     var c = +counter.innerText;
-    var increment = target / 1000;
+    var increment = target / 500;
 
     if (c < target) {
       counter.innerText = "".concat(Math.ceil(c + increment));
@@ -547,16 +547,9 @@ counters.forEach(function (counter) {
   };
 
   updateCounter();
-}); // SVG Animation
+}); // WOW
 
-var hero1 = new Vivus('hero1', {
-  type: 'async',
-  duration: 300
-});
-var hero2 = new Vivus('hero2', {
-  type: 'async',
-  duration: 300
-});
+new WOW().init();
 })();
 
 /******/ })()
